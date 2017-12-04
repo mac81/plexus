@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans|Montserrat');
+
+:root {
+  --font-size-display-4: 11.2rem;
+  --font-size-display-3: 5.6rem;
+  --font-size-display-2: 4.5rem;
+  --font-size-display-1: 3.4rem;
+  --font-size-headline: 2.4rem;
+  --font-size-title: 2rem;
+  --font-size-subhead-2: 1.5rem;
+  
+  --line-height-display-4: 12.8rem;
+  --line-height-display-3: 8.4rem;
+  --line-height-display-2: 4.8rem;
+  --line-height-display-1: 4rem;
+  --line-height-headline: 3.2rem;
+  --line-height-title: 2.8rem;
+  --line-height-subhead-2: 2.8rem;
+  
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  
+  --mq-small: 320px;
+  --mq-medium: 680px;
+  --mq-large: 1024px;
+  --mq-xlarge: 1280px;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans";
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Open Sans Condensed";
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
