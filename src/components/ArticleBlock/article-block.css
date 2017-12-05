@@ -1,0 +1,17 @@
+.article-block {
+  padding: 20px;
+}
+
+.article-block__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* .article-block__image {
+  width: 33.33%;
+}
+
+.article-block__content {
+  width: 66.66%;
+  padding: 20px;
+} */

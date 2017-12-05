@@ -1,9 +1,9 @@
 .hero {
-    display: block;
-    text-align: left;
-    position: relative;
+  display: block;
+  text-align: left;
+  position: relative;
 
-    /*&.frontpage {
+  /*&.frontpage {
         @include bp(large) {
             height: 100%;
             text-align: center;
@@ -12,73 +12,67 @@
 }
 
 .hero__bg {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    padding: 30px;
-    height: 100vh;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  padding: 30px;
+  height: 100vh;
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
   .hero__bg {
     height: 600px;
+  }
+
+  .hero--full .hero__bg {
+    height: 100vh;
   }
 }
 
 .hero__content {
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    max-width: 1200px;
-    transform: translate(-50%, -50%);
-    padding: 30px;
-  }
-  
-.hero__title {
-  font-size: var(--font-size-display-2);
-  line-height: var(--line-height-display-2);
-  font-weight: var(--font-weight-thin);
-
-  margin: 0 0 10px 0;
-  color: rgba(255,255,255, 0.87);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 100%;
+  max-width: 1200px;
+  transform: translate(-50%, -50%);
+  padding: 30px;
 }
 
-@media(min-width: 680px) {
+.hero__title {
+  margin: 0 0 10px 0;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* @media (min-width: 680px) {
   .hero__title {
     font-size: var(--font-size-display-3);
     line-height: var(--line-height-display-3);
   }
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
   .hero__title {
     font-size: var(--font-size-display-4);
     line-height: var(--line-height-display-4);
   }
-}
+} */
 
 .hero__summary {
-  font-size: var(--font-size-title);
-  line-height: var(--line-height-title);
-  font-weight: var(--font-weight-light);
-  
   margin: 0;
-  color: rgba(255,255,255, 0.87);
+  color: rgba(255, 255, 255, 0.87);
 }
 
-@media(min-width: 680px) {
+/* @media (min-width: 680px) {
   .hero__summary {
     font-size: var(--font-size-headline);
     line-height: var(--line-height-headline);
   }
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
   .hero__summary {
     font-size: var(--font-size-display-1);
     line-height: var(--line-height-display-1);
   }
-}
-
+} */

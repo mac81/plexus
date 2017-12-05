@@ -1,0 +1,27 @@
+.menu-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background: #202744;
+
+  transition: transform 300ms ease-in-out;
+  transform: translateY(-100%);
+}
+
+.menu-wrapper--open {
+  transform: translateY(0);
+}
+
+.menu-icon__open {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon__open span {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #fff;
+}

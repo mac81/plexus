@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import {bindActionCreators} from 'redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 //import { values } from 'lodash';
 
-import { fetchPage} from '../actions/appActions';
+import { fetchPage } from "../actions/appActions";
 
-import Hero from '../components/Hero/Hero';
+import Hero from "../components/Hero/Hero";
 
 //import Scroll from 'react-scroll';
 //import matchMedia from 'matchmedia';
@@ -25,61 +25,59 @@ import Hero from '../components/Hero/Hero';
 // import pageIntroStyles from '../components/PageIntro/_pageIntro.scss';
 
 class Frontpage extends Component {
+  constructor(...args) {
+    super(...args);
 
-    constructor(...args) {
-        super(...args);
-        
-        this.props.fetchPage('pageIndex');
-    }
+    this.props.fetchPage("pageIndex");
+  }
 
-    showModal = () => {
-        this.refs.modal.show();
-    }
+  showModal = () => {
+    this.refs.modal.show();
+  };
 
-    hideModal = () => {
-        this.refs.modal.hide();
-    }
+  hideModal = () => {
+    this.refs.modal.hide();
+  };
 
-    render() {
-      
-        const {title, summary, backgroundImage, articles} = this.props;
-      
-        return (
-            <div>
-              <Hero/>
-              {articles && articles.map(article => (
-                <div key={article.sys.id}>
-                  {article.fields.image && (
-                    <img src={article.fields.image.fields.file.url}/>
-                  )}
-                  <h2>{article.fields.title}</h2>
-                  <p>{article.fields.summary}</p>
-                </div>
-              ))}
+  render() {
+    const { title, summary, backgroundImage, articles } = this.props;
+
+    return (
+      <div>
+        <Hero fullHeight />
+        {articles &&
+          articles.map(article => (
+            <div key={article.sys.id}>
+              {article.fields.image && (
+                <img src={article.fields.image.fields.file.url} />
+              )}
+              <h2>{article.fields.title}</h2>
+              <p>{article.fields.summary}</p>
             </div>
-        );
-    }
+          ))}
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = (state, props) => {
+  // const entries = [];
+  // if(state.pages[state.activePage]) {
+  //     state.pages[state.activePage].articles.map(id => {
+  //         let entry = state.entries && Object.values(state.entries).find(entry => entry.sys.id === id);
+  //         entries.push(entry);
+  //     });
+  // }
 
-    // const entries = [];
-    // if(state.pages[state.activePage]) {
-    //     state.pages[state.activePage].articles.map(id => {
-    //         let entry = state.entries && Object.values(state.entries).find(entry => entry.sys.id === id);
-    //         entries.push(entry);
-    //     });
-    // }
-    
-    return {
-        title: state.pageInfo.title,
-        summary: state.pageInfo.summary,
-        backgroundImage: state.pageInfo.backgroundImage,
-        // pageSummary: state.pages[state.activePage] ? state.pages[state.activePage].summary : null,
-        // pageBackgroundImage: state.pages[state.activePage] ? state.pages[state.activePage].backgroundImage : null,
-        articles: state.articles
-    }
-}
+  return {
+    title: state.pageInfo.title,
+    summary: state.pageInfo.summary,
+    backgroundImage: state.pageInfo.backgroundImage,
+    // pageSummary: state.pages[state.activePage] ? state.pages[state.activePage].summary : null,
+    // pageBackgroundImage: state.pages[state.activePage] ? state.pages[state.activePage].backgroundImage : null,
+    articles: state.articles
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   fetchPage: bindActionCreators(fetchPage, dispatch)
