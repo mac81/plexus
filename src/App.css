@@ -8,7 +8,13 @@
   --font-size-headline: 2.4rem;
   --font-size-title: 2rem;
   --font-size-subhead-2: 1.5rem;
+  --font-size-subhead-1: 1.5rem;
   --font-size-body-2: 1.3rem;
+  --font-size-body-1: 1.3rem;
+  --font-size-caption: 1.2rem;
+  --font-size-label: 1.2rem;
+  --font-size-menu: 1.3rem;
+  --font-size-button: 1.4rem;
 
   --line-height-display-4: 12.8rem;
   --line-height-display-3: 8.4rem;
@@ -17,13 +23,27 @@
   --line-height-headline: 3.2rem;
   --line-height-title: 2.8rem;
   --line-height-subhead-2: 2.8rem;
+  --line-height-subhead-1: 2.4rem;
   --line-height-body-2: 2.4rem;
+  --line-height-body-1: 2rem;
+  --line-height-caption: 2rem;
+  --line-height-label: 2rem;
+  --line-height-menu: 2rem;
+  --line-height-button: 2rem;
 
   --letter-spacing-display-4: -0.1;
   --letter-spacing-display-3: -0.05;
   --letter-spacing-display-2: 0;
   --letter-spacing-display-1: 0;
+  --letter-spacing-headline: 0;
+  --letter-spacing-title: 0.05;
+  --letter-spacing-subhead-2: 0.1;
   --letter-spacing-body-2: 0.1;
+  --letter-spacing-body-1: 0.1;
+  --letter-spacing-caption: 0.2;
+  --letter-spacing-label: 0.1;
+  --letter-spacing-menu: 0.1;
+  --letter-spacing-button: 0.1;
 
   --font-weight-thin: 100;
   --font-weight-light: 300;
